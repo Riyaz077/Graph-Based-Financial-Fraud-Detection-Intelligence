@@ -83,3 +83,9 @@ GraphShield/
 
 ### Important limitations
 This repository is a research/portfolio prototype. The included dataset is entirely synthetic and does not represent real customers, accounts, banks or payment networks. The graph model is a compact educational GraphSAGE-style implementation, not a production-grade, large-scale GNN. Results are not evidence of real-world fraud-detection performance. Do not use this project to block payments, accuse individuals, or make financial decisions without independent validation, governance, human review and appropriate regulatory controls. No live banking or UPI integration is included.
+
+### Author
+
+**Mohamed Riyaz S.**  
+Integrated M.Tech, Computer Science and Engineering (Business Analytics)  
+VIT Chennai
