@@ -34,37 +34,23 @@ Fraud Probability + Risk Band
 Dashboard / API / Network Intelligence
 ```
 
-### Quick start
-Python 3.10+ is recommended.
+### Quick Start
 
-```bash
-pip install -r requirements.txt
-python scripts/generate_data.py
-python scripts/train.py
-streamlit run app/streamlit_app.py
-```
+- Ensure Python 3.10 or later is installed.
+- Install the required dependencies using `requirements.txt`.
+- Generate synthetic transaction data.
+- Train the fraud detection model using the training script.
+- Launch the interactive Streamlit dashboard.
+- Start the FastAPI backend separately for API-based fraud detection.
+- Access trained model artifacts in `artifacts/` and evaluation reports in `reports/`.
 
-Start the API separately:
-```bash
-uvicorn api.main:app --reload
-```
+### Using Custom Datasets
 
-The training script writes model artifacts to `artifacts/` and evaluation output to `reports/`.
-
-### Use your own data
-Provide a CSV containing these columns:
-- `transaction_id`
-- `sender_id`
-- `receiver_id`
-- `amount`
-- `hour`
-- `channel`
-- `is_fraud` (0 or 1; training/evaluation only)
-
-Run:
-```bash
-python scripts/train.py --data path/to/transactions.csv
-```
+- Prepare a transaction dataset in CSV format.
+- Include transaction ID, sender ID, receiver ID, transaction amount, timestamp hour, payment channel, and fraud labels.
+- Ensure `is_fraud` contains binary values (0 or 1) for model training and evaluation.
+- Execute the training pipeline with your custom dataset path.
+- Review the generated model artifacts and evaluation reports.
 
 ### Project structure
 ```text
@@ -81,8 +67,26 @@ GraphShield/
 └── README.md
 ```
 
-### Important limitations
-This repository is a research/portfolio prototype. The included dataset is entirely synthetic and does not represent real customers, accounts, banks or payment networks. The graph model is a compact educational GraphSAGE-style implementation, not a production-grade, large-scale GNN. Results are not evidence of real-world fraud-detection performance. Do not use this project to block payments, accuse individuals, or make financial decisions without independent validation, governance, human review and appropriate regulatory controls. No live banking or UPI integration is included.
+### Limitations
+
+- This repository is a research and portfolio prototype, not a production-ready fraud detection system.
+- Uses entirely synthetic transaction data with no real banking, customer, or UPI records.
+- Implements a compact educational GraphSAGE-style model rather than a production-scale Graph Neural Network.
+- Model performance does not establish real-world fraud detection effectiveness.
+- No live banking, UPI, payment gateway, or financial network integration is included.
+- Real-world deployment requires independent validation, scalability testing, and regulatory assessment.
+
+### Responsible Use
+
+- Use this project strictly for educational, research, and portfolio demonstration purposes.
+- Do not use predictions as the sole basis for blocking transactions or restricting financial accounts.
+- Never use model outputs to accuse individuals of fraudulent activity without verified evidence and human investigation.
+- Protect sensitive financial information and follow applicable data privacy regulations.
+- Evaluate potential model bias, false positives, and false negatives before practical application.
+- Require human oversight, independent validation, and appropriate governance for financial decisions.
+- Do not upload real customer information, banking credentials, UPI IDs, or confidential transaction records into this demo.
+
+**Disclaimer:** This project demonstrates AI-driven financial transaction analytics and graph-based fraud intelligence. It is not a certified financial security solution and should not replace established fraud investigation, banking controls, or regulatory compliance procedures.
 
 ### Author
 
