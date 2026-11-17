@@ -1,6 +1,8 @@
 # Graph Neural Network-Based Financial Transaction Network and Fraud Intelligence
 
-An AI-powered financial fraud analytics prototype designed to represent financial transactions as interconnected graphs, identify suspicious transaction patterns, and estimate potential fraud risk using Graph Neural Networks. The system integrates transaction preprocessing, directed graph construction, network feature engineering, GraphSAGE-style message passing, and fraud classification. It also compares graph-based learning with a traditional Random Forest baseline and provides interactive fraud analytics through a Streamlit dashboard and FastAPI REST service.
+An AI-powered financial fraud analytics prototype designed to represent financial transactions as interconnected graphs, identify suspicious transaction patterns, and estimate potential fraud risk using Graph Neural Networks.
+
+The system integrates transaction preprocessing, directed graph construction, network feature engineering, GraphSAGE-style message passing, and fraud classification. It also compares graph-based learning with a traditional Random Forest baseline and provides interactive fraud analytics through a Streamlit dashboard and FastAPI REST service.
 
 > **Data and Security Notice:** This project uses entirely synthetic transaction data for educational and research purposes. It does not contain real banking, customer, or UPI transaction records and does not connect to live financial networks, payment gateways, or banking systems. Model predictions are experimental estimates, not verified evidence of fraudulent activity.
 
